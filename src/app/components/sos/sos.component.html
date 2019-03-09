@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header fxLayoutAlign="start center" class="w3-container w3-teal">
+      <button routerLink="dashboard" class="w3-button custom-button margin-left">
+        <i class="w3-medium fa fa-chevron-left"></i> Back</button>
+        <h1 style="margin-left:33%">SOS</h1>
+  </mat-card-header>
+  <mat-card-content style="padding:10%">
+      <div fxFlex fxLayout="row" fxLayoutAlign="row space-between center">
+        <span fxFlex fxLayout="column" fxLayoutAlign="row space-between center">
+        <button mat-fab color="warn" (click)="openDialog(1)" class="sosbutton">Official</button></span>
+        <span fxFlex fxLayout="column" fxLayoutAlign="row space-between center">
+        <button mat-fab color="warn" (click)="openDialog(2)" class="sosbutton">Personal</button>
+        </span>
+        <span fxFlex fxLayout="column" fxLayoutAlign="row space-between center">
+        <button mat-fab color="warn" (click)="openDialog(3)" class="sosbutton">Both</button>
+        </span>
+      </div>
+      <div style="padding-top: 10%;"></div>
+      <div *ngIf="onSend" class="success">
+              Help Arriving!          
+      </div>
+  </mat-card-content>
+</mat-card>
