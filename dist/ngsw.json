@@ -1,0 +1,85 @@
+{
+  "configVersion": 1,
+  "index": "/ng5-pwa-wmhack/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/ng5-pwa-wmhack/index.html",
+        "/ng5-pwa-wmhack/inline.5ebd9eb3638dabd0c0b0.bundle.js",
+        "/ng5-pwa-wmhack/main.4cd0921a25093d392948.bundle.js",
+        "/ng5-pwa-wmhack/polyfills.dd0fcabf000302342ad7.bundle.js",
+        "/ng5-pwa-wmhack/styles.a87b551ac966d8867d7d.bundle.css",
+        "/ng5-pwa-wmhack/vendor.8adf13f3bdb53c686c49.bundle.js"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/ng5-pwa-wmhack/assets/Accomodation.png",
+        "/ng5-pwa-wmhack/assets/Banks.MP4",
+        "/ng5-pwa-wmhack/assets/blrcal.png",
+        "/ng5-pwa-wmhack/assets/card.jpg",
+        "/ng5-pwa-wmhack/assets/chat.png",
+        "/ng5-pwa-wmhack/assets/chncal.png",
+        "/ng5-pwa-wmhack/assets/document.png",
+        "/ng5-pwa-wmhack/assets/favicon.png",
+        "/ng5-pwa-wmhack/assets/gold-card.png",
+        "/ng5-pwa-wmhack/assets/Hotel.MOV",
+        "/ng5-pwa-wmhack/assets/Hotels.MP4",
+        "/ng5-pwa-wmhack/assets/icon-128x128.png",
+        "/ng5-pwa-wmhack/assets/icon-152x152.png",
+        "/ng5-pwa-wmhack/assets/icon-256x256.png",
+        "/ng5-pwa-wmhack/assets/icon-512x512.png",
+        "/ng5-pwa-wmhack/assets/logo.png",
+        "/ng5-pwa-wmhack/assets/notification.png",
+        "/ng5-pwa-wmhack/assets/Pharmacy.MOV",
+        "/ng5-pwa-wmhack/assets/punecal.png",
+        "/ng5-pwa-wmhack/assets/rupee.png",
+        "/ng5-pwa-wmhack/assets/sos.jpg",
+        "/ng5-pwa-wmhack/assets/Taxi.png",
+        "/ng5-pwa-wmhack/assets/travelcare.pdf"
+      ],
+      "patterns": [
+        "https:\\/\\/cataas\\.com\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/ng5-pwa-wmhack/inline.5ebd9eb3638dabd0c0b0.bundle.js": "5997f538b980b7c926ef7739568080e4ad6a80dd",
+    "/ng5-pwa-wmhack/assets/Accomodation.png": "3c65179de36821c05c22dbbd73f17db7a8a2513e",
+    "/ng5-pwa-wmhack/main.4cd0921a25093d392948.bundle.js": "c881b0e318c5136d307cd954e7369a19c26d09d6",
+    "/ng5-pwa-wmhack/assets/Banks.MP4": "e9afa909eb7c1606583ce9dd313b9bc1fa2e4806",
+    "/ng5-pwa-wmhack/polyfills.dd0fcabf000302342ad7.bundle.js": "ddb175dbcd3e0c5d056b0895ab88d49b244f32c3",
+    "/ng5-pwa-wmhack/assets/blrcal.png": "c26e7ddccd1ba3b95ab415bbb2bdc81d4cec6319",
+    "/ng5-pwa-wmhack/styles.a87b551ac966d8867d7d.bundle.css": "2ba6ffa4d8c6e81ef8d46b92d006bdcca91e92b6",
+    "/ng5-pwa-wmhack/assets/card.jpg": "6e6636a33f3be3b229662b913793d737aa6f718f",
+    "/ng5-pwa-wmhack/vendor.8adf13f3bdb53c686c49.bundle.js": "a6cf7f171800a9a723ee015c63ef52fdb9fb0c5e",
+    "/ng5-pwa-wmhack/assets/chat.png": "d33a6fc8fee0e0d7ee3e46c32a620ff0e18c49e3",
+    "/ng5-pwa-wmhack/index.html": "1aac21be116e8a16286636119cc12f7e976274eb",
+    "/ng5-pwa-wmhack/assets/chncal.png": "e4bff0527a98e3ec69c3ff3ea954aad631118d03",
+    "/ng5-pwa-wmhack/assets/document.png": "f0c77c35bc7f16041de46a31854a68144c3dc88b",
+    "/ng5-pwa-wmhack/assets/favicon.png": "b7aab527f029d89489ced7afbd45061886d232fd",
+    "/ng5-pwa-wmhack/assets/gold-card.png": "899f67bf975cf7acd1c976d63dab3306d2bf8036",
+    "/ng5-pwa-wmhack/assets/Hotel.MOV": "ab08b20cbe11ecf3095fbb114dfa3dc0610d5f84",
+    "/ng5-pwa-wmhack/assets/Hotels.MP4": "649f5c0fff652dc047cc02e38bb9fa3b306196b2",
+    "/ng5-pwa-wmhack/assets/icon-128x128.png": "f444fd3ae0dbc3be5741ef77cf9d0aa21bcdd9d5",
+    "/ng5-pwa-wmhack/assets/icon-152x152.png": "c439eef9906d5a1758700fbbc8ea38d7295eb1bb",
+    "/ng5-pwa-wmhack/assets/icon-256x256.png": "aa794bf00591bd06c9fee00126b321baa155ee8d",
+    "/ng5-pwa-wmhack/assets/icon-512x512.png": "ad9b5746e8a586f161f92b21f97c4cd81b157965",
+    "/ng5-pwa-wmhack/assets/logo.png": "5a3877327b5f79b29755e2211899249a5893bcaf",
+    "/ng5-pwa-wmhack/assets/notification.png": "960c8d15975b9a5586efeabd8629a0798982e021",
+    "/ng5-pwa-wmhack/assets/Pharmacy.MOV": "5b947d0b499200a0b2f6b55ed33fa29509d4d71e",
+    "/ng5-pwa-wmhack/assets/punecal.png": "803bcaba56ee8c31f965c66d6a3078cb36d97a6f",
+    "/ng5-pwa-wmhack/assets/rupee.png": "0e77f81bcf9e73a6c5a12909b6bad411d7d78a3b",
+    "/ng5-pwa-wmhack/assets/sos.jpg": "cec46359a03d721989d375d7b68344c9982c6cde",
+    "/ng5-pwa-wmhack/assets/Taxi.png": "6caa24503f89d49c0474014c86e348b2994ca440",
+    "/ng5-pwa-wmhack/assets/travelcare.pdf": "e9421fc9e0cc15715e94d4b78312b05dbf9fe84f"
+  }
+}
