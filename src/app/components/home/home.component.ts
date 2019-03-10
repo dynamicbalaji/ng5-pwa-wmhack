@@ -26,6 +26,7 @@ import { TeamComponent } from '../../components/team/team.component';
  import {AccomodationReComponent} from  './../../components/Rescheduling/accomodation-resched/accomodation.component';
 import {DomesticTravelReComponent} from  './../../components/Rescheduling/domestic-travel-resched/domestic-travel.component';
 import {TaxiReComponent} from './../../components/Rescheduling/taxi-resched/taxi.component';
+import { UserService } from '../../services/user/user.service';
  @Component({
  	selector: 'app-home',
  	templateUrl: './home.component.html',
@@ -36,8 +37,9 @@ import {TaxiReComponent} from './../../components/Rescheduling/taxi-resched/taxi
 
 
  export class HomeComponent implements OnInit {
- 	active:string;
- 	constructor(private router: Router,private toastr: ToastrService) {
+	 active:string;
+	 loginType:string= this.user.userType;
+ 	constructor(private router: Router,private toastr: ToastrService,private user:UserService) {
  		// Detect route changes for active sidebar menu
  		this.router.events.subscribe((val) => {
  			this.routeChanged(val);
@@ -45,7 +47,9 @@ import {TaxiReComponent} from './../../components/Rescheduling/taxi-resched/taxi
  	}
 
  	ngOnInit() {
- 	}
+		this.user.userType = localStorage.getItem('userType') === "" ? "": localStorage.getItem('userType');
+		
+	}
 
  	// Detect route changes for active sidebar menu
  	routeChanged(val){

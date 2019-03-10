@@ -25,6 +25,8 @@ export class DomesticTravelComponent implements OnInit {
   flights:FlightsVO[]=new Array<FlightsVO>();
   bookingSuccess:boolean = false;
   selectedFlight :FlightsVO;
+  timer:any;
+  showTimer:boolean = false;
 
   ngOnInit() {
     this.travelForm=this.formBuilder.group({
@@ -54,6 +56,13 @@ export class DomesticTravelComponent implements OnInit {
       "Carlson Wagonlit Travels": 30
     }
   }
+  setTimer() {
+    clearTimeout(this.timer);
+    this.showTimer = true;
+    this.timer = setTimeout(() => {
+        this.showTimer = false;
+    }, 2000);
+  }
 
   change(event){
     if(event.checked){
@@ -74,6 +83,7 @@ export class DomesticTravelComponent implements OnInit {
 
   bookFlights() {
     this.bookingSuccess = true;
+    this.setTimer();
   
   }
 
@@ -82,6 +92,7 @@ export class DomesticTravelComponent implements OnInit {
   }
 
   fetchFlights(){
+    this.setTimer();
     this.flights=[{
       "airlines":"Indigo",
       "depCode":"MAA",

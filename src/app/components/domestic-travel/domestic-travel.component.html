@@ -2,6 +2,12 @@
   <div class="w3-panel w3-round-small w3-teal">
       <h3> Domestic/International trip booking<!--<button routerLink="/add" class="w3-button w3-orange custom-button"><i class="w3-medium  fa fa-plus"></i> Add New Employee</button>--></h3>
     </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <img height="100px" *ngIf="showTimer" width="100px" style="text-align: center;margin-top: 250px;
+      position: fixed;
+      z-index: 100;" src="assets/loader2.gif">
+    </div>
+
   <mat-card style="margin:5vw" class="card" *ngIf="!bookingSuccess">
     <mat-card-header fxLayoutAlign="center center">
     </mat-card-header>
@@ -143,7 +149,7 @@
           </div>
         </form>
       </div>
-      <div fxFlex *ngIf="flights.length>0" style="margin-top:2vw">
+      <div fxFlex *ngIf="flights.length>0 && !showTimer" style="margin-top:2vw">
         <div fxFlex *ngFor="let flight of flights" class="row">
           <div fxFlex fxLayout="row" fxLayoutGap=1vw>
   
@@ -221,15 +227,15 @@
         </div>
       </div>
 
-      <div fxFlex fxLayout="row" fxLayoutAlign="center center" *ngIf="selectedFlight!==null && selectedFlight!==undefined">
-        <button mat-button type="submit" (click)="bookFlights()" class="sbmt">Confirm
+      <div fxFlex fxLayout="row" fxLayoutAlign="center center" *ngIf="selectedFlight!==null && selectedFlight!==undefined" style="margin-top:10px;">
+        <button type="submit" (click)="bookFlights()" class="w3-button w3-deep-orange">Confirm
       
         </button>
       </div>
     </mat-card-content>
   </mat-card>
 
-  <mat-card *ngIf="bookingSuccess">
+  <mat-card *ngIf="bookingSuccess  && !showTimer">
     <mat-card-content style="width:100%">
         <div fxFlex fxLayout="column" style="font-size:22px" fxLayoutAlign="center center">
             <div fxFlex=10>

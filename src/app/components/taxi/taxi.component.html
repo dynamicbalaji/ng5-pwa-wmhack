@@ -8,6 +8,12 @@
         </h3>
     </div>
 
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <img height="100px" *ngIf="showTimer" width="100px" style="text-align: center;margin-top: 250px;
+        position: fixed;
+        z-index: 100;" src="assets/loader2.gif">
+      </div>
+
     <mat-card *ngIf="!bookingSuccess">
         <form class="w3-container" [formGroup]="studentAddForm" (ngSubmit)="doRegister()">
             <mat-card-content>
@@ -198,13 +204,13 @@
                 <br>
 
                 <button class="w3-button w3-deep-orange" type="submit">
-                    <span *ngIf="index == undefined">Quick book</span>
+                    <span *ngIf="index == undefined" (click)="fetchtaxi()">Quick book</span>
                 </button>
 
             </mat-card-content>
         </form>
     </mat-card>
-    <mat-card *ngIf="bookingSuccess">
+    <mat-card *ngIf="bookingSuccess && !showTimer">
         <mat-card-content style="width:100%">
             <div fxFlex fxLayout="column" style="font-size:22px" fxLayoutAlign="center center" *ngFor="let taxi of taxiLst">
                 <div fxFlex=10>

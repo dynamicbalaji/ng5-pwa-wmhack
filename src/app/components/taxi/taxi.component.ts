@@ -16,6 +16,8 @@ import { environment } from '../../../environments/environment';
 export class TaxiComponent implements OnInit {
 
  // create studentAddForm of type FormGroup 
+ timer:any;
+ showTimer:boolean = false;
  private studentAddForm : FormGroup;
  index:any;
  city:string[] = ['Chennai','Bangalore','Hyderabad','Pune'];
@@ -60,6 +62,15 @@ constructor(private formBuilder: FormBuilder,private router: Router, private rou
 
 ngOnInit() {
 }
+
+setTimer() {
+    clearTimeout(this.timer);
+    this.showTimer = true;
+    this.timer = setTimeout(() => {
+        this.showTimer = false;
+    }, 2000);
+  }
+
 bookingSuccess:boolean=false;
 taxiLst:taxiLst[]=new Array<taxiLst>() ;
 // Submit student details form
@@ -94,6 +105,9 @@ doRegister(){
 
 }
 
+fetchtaxi(){
+    this.setTimer();
+}
 // If this is update form, get user details and update form
 getStudentDetails(index:number){
    let studentDetail = this.studentService.getStudentDetails(index);

@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
 	success(data){
 		if (data.code == 200) {
 			localStorage.setItem('userData', JSON.stringify(data.data));
+			localStorage.setItem('userType', data.userType);
 			this.router.navigate(['/']);
 			this.toastr.success('Success', "Logged In Successfully");
 		}else{
