@@ -8,8 +8,8 @@
       "updateMode": "prefetch",
       "urls": [
         "/ng5-pwa-wmhack/index.html",
-        "/ng5-pwa-wmhack/inline.35828d1340b40fa5b14f.bundle.js",
-        "/ng5-pwa-wmhack/main.268779173740a0c909b2.bundle.js",
+        "/ng5-pwa-wmhack/inline.6900e528c87a6aa16e1d.bundle.js",
+        "/ng5-pwa-wmhack/main.7346874a5592030f7438.bundle.js",
         "/ng5-pwa-wmhack/polyfills.dd0fcabf000302342ad7.bundle.js",
         "/ng5-pwa-wmhack/styles.587a9afc08b1f7161021.bundle.css",
         "/ng5-pwa-wmhack/vendor.8adf13f3bdb53c686c49.bundle.js"
@@ -54,9 +54,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/ng5-pwa-wmhack/inline.35828d1340b40fa5b14f.bundle.js": "e58f5f787c9ec3be8fad97a64cd8ffdd29a46d73",
+    "/ng5-pwa-wmhack/inline.6900e528c87a6aa16e1d.bundle.js": "460d138b021b1ebd9d59a4c441138228fac6399e",
     "/ng5-pwa-wmhack/assets/Accomodation.png": "3c65179de36821c05c22dbbd73f17db7a8a2513e",
-    "/ng5-pwa-wmhack/main.268779173740a0c909b2.bundle.js": "868be2bd15f82e09be61d48da73ff8efbfb71090",
+    "/ng5-pwa-wmhack/main.7346874a5592030f7438.bundle.js": "761ae9ba5b211711381357a741fae9708464a101",
     "/ng5-pwa-wmhack/assets/Banks.MP4": "e9afa909eb7c1606583ce9dd313b9bc1fa2e4806",
     "/ng5-pwa-wmhack/polyfills.dd0fcabf000302342ad7.bundle.js": "ddb175dbcd3e0c5d056b0895ab88d49b244f32c3",
     "/ng5-pwa-wmhack/assets/blrcal.png": "c26e7ddccd1ba3b95ab415bbb2bdc81d4cec6319",
@@ -64,7 +64,7 @@
     "/ng5-pwa-wmhack/assets/card.jpg": "6e6636a33f3be3b229662b913793d737aa6f718f",
     "/ng5-pwa-wmhack/vendor.8adf13f3bdb53c686c49.bundle.js": "a6cf7f171800a9a723ee015c63ef52fdb9fb0c5e",
     "/ng5-pwa-wmhack/assets/chat.png": "d33a6fc8fee0e0d7ee3e46c32a620ff0e18c49e3",
-    "/ng5-pwa-wmhack/index.html": "aca30faf7c2ae97220e7ad7b0450688c9511128e",
+    "/ng5-pwa-wmhack/index.html": "75899355c7a2b16218ddd8ddc780c3b758886bf4",
     "/ng5-pwa-wmhack/assets/chncal.png": "e4bff0527a98e3ec69c3ff3ea954aad631118d03",
     "/ng5-pwa-wmhack/assets/document.png": "f0c77c35bc7f16041de46a31854a68144c3dc88b",
     "/ng5-pwa-wmhack/assets/favicon.png": "b7aab527f029d89489ced7afbd45061886d232fd",
