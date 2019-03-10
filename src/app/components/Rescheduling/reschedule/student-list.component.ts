@@ -35,7 +35,6 @@
  	// Get student list success
  	success(data){
 		 this.studentListData = data.data;
-		 console.log(this.studentListData);
  		for (var i = 0; i < this.studentListData.length; i++) {
  			this.studentListData[i].name = this.studentListData[i].first_name +' '+ this.studentListData[i].last_name;
  		}

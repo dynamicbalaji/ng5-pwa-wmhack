@@ -1,6 +1,6 @@
 <div class="w3-container" >
   <div class="w3-panel w3-round-small w3-teal">
-      <h3> Domestic/International trip booking<!--<button routerLink="/add" class="w3-button w3-green custom-button"><i class="w3-medium  fa fa-plus"></i> Add New Employee</button>--></h3>
+      <h3> Domestic/International trip booking<!--<button routerLink="/add" class="w3-button w3-orange custom-button"><i class="w3-medium  fa fa-plus"></i> Add New Employee</button>--></h3>
     </div>
   <mat-card style="margin:5vw" class="card" *ngIf="!bookingSuccess">
     <mat-card-header fxLayoutAlign="center center">
@@ -53,7 +53,7 @@
           </div>
           <div fxFlex fxLayout.lg="row" fxLayout=column fxLayoutAlign="center center">
             <mat-form-field fxFlex=30>
-              <mat-select placeholder="Agency" formControlName="numOfPsgnr">
+              <mat-select placeholder="Agent (Optional)" formControlName="numOfPsgnr">
                 <mat-option *ngFor="let agency of agencies" [value]="agency" [matTooltip]="agenciesReview[agency]" matTooltipClass="tooltip"
                 matTooltipPosition="after"><span>{{agency}}</span>
                 <span class="stars-outer"><span class="stars-inner"  [style.width.%]="agenciesRating[agency]"></span></span>               

@@ -8,7 +8,6 @@
 
      sendNoti(mobile: number, msg: string){
          this.http.get(`http://localhost:5000/api/notify/sendmsg/${mobile}/${msg}`).subscribe(data => {
-            console.log(data);
             console.log("sent");
         });
      }

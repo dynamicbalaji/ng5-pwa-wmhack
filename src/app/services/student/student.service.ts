@@ -31,7 +31,6 @@
    doRegisterStudent(data, index){
      let studentList = JSON.parse(localStorage.getItem('students'));
      let returnData;
-     console.log("index", index);
      if(index != null) {
 
 
