@@ -5,6 +5,12 @@
 		<h3>Eligibility Details <button routerLink="/" class="w3-button w3-orange custom-button margin-right"> <i class="w3-medium fa fa-chevron-left"></i> Back</button></h3>
 	</div>
 
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <img height="100px" *ngIf="showTimer" width="100px" style="text-align: center;margin-top: 250px;
+        position: fixed;
+        z-index: 100;" src="assets/loader2.gif">
+      </div>
+
 	<mat-card>
 		<mat-card-content>
 	<form class="w3-container" [formGroup]="studentAddForm" (ngSubmit)="getData()">
@@ -36,7 +42,7 @@
                     </div>
                 </div>
                 <div fxFlex fxLayout="row" fxLayoutAlign="end end">
-                        <button type="submit" [disabled]="!studentAddForm.valid" class="w3-button w3-deep-orange">Submit</button>
+                        <button type="submit"  [disabled]="!studentAddForm.valid" class="w3-button w3-deep-orange" (click)="fetcheligibility()">Submit</button>
                 </div>
                 <!--<button class="w3-button w3-blue" type="submit" [disabled]="!studentAddForm.valid" >
                     <span>Submit</span>
@@ -44,7 +50,7 @@
 	</form>
 
 	<br>
-		<table class="w3-table w3-bordered" *ngIf="eligibilityData">
+		<table class="w3-table w3-bordered" *ngIf="eligibilityData &&!showTimer">
 			<tr>
 				<td><i class="w3-medium"></i> Flight Eligibility</td>
 				<td>: <b>INR {{eligibilityData.flight}}</b></td>

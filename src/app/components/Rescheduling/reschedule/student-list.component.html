@@ -1,6 +1,6 @@
 <!-- Created By : Infosys Walmart Account -->
 
-<div class="w3-container" *ngIf="studentListData">
+<div class="w3-container" *ngIf="studentListData" ngClass.xs="w3-container-mob">
 	<div class="w3-panel w3-round-small w3-teal">
 		<h3>My Requests <!--<button routerLink="/add" class="w3-button w3-orange custom-button"><i class="w3-medium  fa fa-plus"></i> Add New Employee</button>--></h3>
 	</div>
@@ -11,7 +11,7 @@
 		<p><span *ngIf="filterData"> No matching results</span> </p>
 	</div>
 	<div class="w3-panel w3-light-grey w3-padding-16 w3-card-2" *ngIf="(studentListData | filter:filterData | filter:filterData).length != 0">
-		<table class="w3-table w3-striped w3-bordered">
+		<table class="w3-table w3-striped w3-bordered" fxShow fxHide.lt-md="true">
 			<tr>
 				<th><i class="w3-medium"></i> iTravel. No.</th>
 				<!-- <th>ID</th> -->
@@ -23,15 +23,97 @@
 			</tr>
 			<tr *ngFor="let student of studentListData | filter:filterData; index as i;" appHighlightStudent>
 				<td>{{student.id}}</td>
-				<td class="pointer" [routerLink]="['detail', i]">{{student.first_name}} </td>
-				<td class="pointer" [routerLink]="['detail', i]">{{student.last_name}}</td>
-				<td class="pointer" [routerLink]="['detail', i]">{{student.reqType}}</td>
-				<td class="pointer" [routerLink]="['detail', i]">{{student.phone}}</td>
+				<td>{{student.first_name}} </td>
+				<td>{{student.last_name}}</td>
+				<td>{{student.reqType}}</td>
+				<td>{{student.phone}}</td>
 				<td><button routerLink="/rescacc" *ngIf="student.reqType=='Accommodation'" class="w3-button w3-deep-orange">Reschedule</button>
 				<button routerLink="/resctaxi" *ngIf="student.reqType=='Local Taxi'" class="w3-button w3-deep-orange">Reschedule</button>
 				<button routerLink="/rescInt" *ngIf="student.reqType=='International'" class="w3-button w3-deep-orange">Reschedule</button></td>
 			</tr>
 		</table>
+		<div fxFlex class="row1" fxHide fxShow.lt-md="true">
+			<div fxFlex fxLayout="row" fxLayoutGap=1vw fxLayoutGap.xs=4vw>
+	
+			<div fxFlex=15>
+				<div fxFlex fxLayout="column">
+				<div fxFlex=70>
+					<span style="font-weight: bold"> iTravel No.</span>
+				</div>
+				</div>
+			</div>
+	
+	
+			<div fxFlex=15>
+				<div fxFlex fxLayout="column">
+				<div fxFlex=70>
+					
+					<span style="font-weight: bold">Name</span>
+				
+				</div>
+				<div fxFlex=30>
+				
+				</div>
+				</div>
+			</div>
+	
+			<div fxFlex=15 fxFlex.xs=25 ngStyle.xs="word-break: break-word">
+				<div fxFlex>
+				<span style="font-weight: bold">RequestType/Emp Id</span>
+	
+				</div>
+			</div>
+	
+			<!-- <div fxFlex=15 >
+				<div fxFlex> 
+				<span style="font-weight: bold">Emp Id</span>
+				</div>
+			</div>	 -->
+		</div>
+	</div>	
+	<div fxFlex  style="margin-top:2vw" *ngFor = "let student of studentListData | filter:filterData; index as i;" fxHide fxShow.lt-md="true">						
+		<div fxFlex class="row1">
+				<div fxFlex fxLayout="row" fxLayoutGap=1vw fxLayoutGap.xs=4vw>
+		
+				<div fxFlex=15>
+					<div fxFlex fxLayout="column">
+					<div fxFlex=70>
+							<div fxFlex fxLayout="column">
+						<span class=subtext>{{student.id}}</span>						
+						</div>
+					</div>
+					</div>
+				</div>
+		
+		
+				<div fxFlex=15>
+					<div fxFlex fxLayout="column">
+					<div fxFlex=70>
+						<span  class.lt-md="maintextxs" class.lg="maintext">{{student.first_name}}
+						<span >{{student.last_name}}</span>
+						</span>
+					</div>		
+					</div>
+				</div>		
+				<div fxFlex=25 ngStyle.xs="word-break: break-word">
+					<div fxFlex fxLayout="column" fxLayoutGap="1vw">
+						<div fxFlex=50>
+							<span>{{student.reqType}}</span>
+						</div>
+						<div fxFlex=50>
+							<span>{{student.phone}}</span>
+						</div>
+					</div>
+				</div>
+				<div fxFlex=15 >
+					<button routerLink="/rescacc" *ngIf="student.reqType=='Accommodation'" class="w3-button-mob w3-deep-orange">Reschedule</button>
+					<button routerLink="/resctaxi" *ngIf="student.reqType=='Local Taxi'" class="w3-button-mob w3-deep-orange">Reschedule</button>
+					<button routerLink="/rescInt" *ngIf="student.reqType=='International'" class="w3-button-mob w3-deep-orange">Reschedule</button>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 	</div>
 </div>
 

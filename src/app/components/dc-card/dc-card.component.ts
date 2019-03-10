@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DcCardComponent implements OnInit {
 
+  vidName: string = "";
+
   constructor() { }
 
   ngOnInit() {
@@ -16,9 +18,18 @@ dcs=[{value:'CHN-M',viewValue:'Chennai Mcity'},{value:'PUNE',viewValue:'Pune'},{
 nearMeLst = [{value:1,viewValue:'Restaurants'},{value:2,viewValue:'Pharmacy'},{value:3,viewValue:'Bank/ATM'}];
 
 selecteddc:string="CHN-M";
-lightbox_open() {
+lightbox_open(event) {
   let lightBoxVideo = <HTMLVideoElement> document.getElementById("VisaChipCardVideo");
   window.scrollTo(0, 0);
+  if(event.value === 1){
+    lightBoxVideo.src = "assets/Hotels.MP4";
+  } else if(event.value === 2){
+    lightBoxVideo.src = "assets/Pharmacy.MOV";
+  } else {
+    lightBoxVideo.src = "assets/Banks.MP4";
+  }
+  lightBoxVideo.height = 500;
+  lightBoxVideo.width = 250;
   document.getElementById('light').style.display = 'block';
   document.getElementById('fade').style.display = 'block';
   lightBoxVideo.play();

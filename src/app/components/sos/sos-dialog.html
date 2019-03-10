@@ -1,11 +1,11 @@
-<h1 mat-dialog-title class="caution">Caution</h1>
+<h1 mat-dialog-title class="caution" ngClass.xs="caution-mob">Caution</h1>
 <div mat-dialog-content>
   <p>{{data.msg}}</p>
   <table border="1">
   <span>
-  <i class="material-icons" style="font-size:50px;color:green">location_on</i>
-  <i class="material-icons" style="font-size:50px">mic</i>
-  <i class="material-icons" style="font-size:50px">camera_alt</i>
+  <i class="material-icons" style="font-size:50px;color:green" ngStyle.xs="font-size:30px;color:green">location_on</i>
+  <i class="material-icons" style="font-size:50px" ngStyle.xs="font-size:30px">mic</i>
+  <i class="material-icons" style="font-size:50px" ngStyle.xs="font-size:30px">camera_alt</i>
   </span><br>
   <mat-form-field>
     <input matInput [(ngModel)]="data.animal" placeholder="Add any message">

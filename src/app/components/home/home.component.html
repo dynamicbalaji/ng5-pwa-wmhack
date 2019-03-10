@@ -5,11 +5,12 @@
 		<button class="w3-button w3-xlarge w3-hide-large" (click)="open()">&#9776;</button>
 		<img src="assets/logo-mob.png" style="margin-bottom: -10px" fxHide fxShow.lt-md="true">
 </div>
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:250px;" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card-2" ngClass.xs="w3-sidebar-mob w3-bar-block w3-collapse w3-animate-left w3-card-2" 
+style="z-index:3;width:250px;" id="mySidebar" (click)="closeNav()">
 	<!-- Logo -->
 	<img src="assets/logo.png" class="logo"  fxShow fxHide.lt-md="true">
 	<!-- Sidebar Links -->
-	<div *ngIf="loginType === 'associate'"> 
+	<div *ngIf="loginType === 'employee'"> 
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/')}" routerLink="/"> <i class="w3-medium fa fa-plane"></i>  Flight</a> 
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/taxi')}" routerLink="/taxi"> <i class="w3-medium fa fa-taxi"></i>  Local Taxi</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/hotel')}" routerLink="/hotel"> <i class="w3-medium fa fa-hotel"></i>  Accommodation</a>
@@ -20,10 +21,11 @@
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/reschedule')}" routerLink="/reschedule"> <i class=" w3-medium material-icons">note</i> My Requests</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/sos')}" routerLink="/sos"> <i class="w3-medium material-icons">warning</i> SOS</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/dcdetails')}" routerLink="/dcdetails"> <i class="w3-medium material-icons">work</i>  DC Details</a>
+		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/preferences')}" routerLink="/preferences"> <i class="w3-medium fa fa-puzzle-piece"></i>  Preferences</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/bills')}" routerLink="/bills"> <i class="w3-medium material-icons">description</i> Bills Upload</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/team')}" routerLink="/team"> <i class="w3-medium fa fa-group"></i> Team</a>
 	</div>
-	<div *ngIf="loginType === 'admin'">
+	<div *ngIf="loginType === 'manager'">
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/')}" routerLink="/"> <i class="w3-medium fa fa-plane"></i>  Flight</a> 
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/taxi')}" routerLink="/taxi"> <i class="w3-medium fa fa-taxi"></i>  Local Taxi</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/hotel')}" routerLink="/hotel"> <i class="w3-medium fa fa-hotel"></i>  Accommodation</a>
@@ -34,6 +36,7 @@
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/reschedule')}" routerLink="/reschedule"> <i class=" w3-medium material-icons">note</i> My Requests</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/sos')}" routerLink="/sos"> <i class="w3-medium material-icons">warning</i> SOS</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/dcdetails')}" routerLink="/dcdetails"> <i class="w3-medium material-icons">work</i>  DC Details</a>
+		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/preferences')}" routerLink="/preferences"> <i class="w3-medium fa fa-puzzle-piece"></i>  Preferences</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/bills')}" routerLink="/bills"> <i class="w3-medium material-icons">description</i> Bills Upload</a>
 		<a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/team')}" routerLink="/team"> <i class="w3-medium fa fa-group"></i> Team</a>
 	</div>
@@ -43,7 +46,7 @@
 </nav>
 
 <!-- Load main contents -->
-<div class="w3-main" style="margin-left:250px;">
+<div class="w3-main" style="margin-left:250px;" (click)="closeNav()">
 	<div class="w3-container" ngClass.xs="w3-container-mob">
 	<!-- Initiate Child Routing -->
 		<router-outlet></router-outlet>

@@ -44,6 +44,7 @@ import {AccomodationReComponent} from  './components/Rescheduling/accomodation-r
 import {DomesticTravelReComponent} from  './components/Rescheduling/domestic-travel-resched/domestic-travel.component';
 import {RescheduleComponent} from './components/Rescheduling/reschedule/student-list.component';
 import {TaxiReComponent} from './components/Rescheduling/taxi-resched/taxi.component';
+import {PreferencesComponent} from './components/preferences/preferences.component';
 
 // Parent Routes
 const routes : Routes = [
@@ -89,7 +90,8 @@ const routes : Routes = [
 	TaxiReComponent,
 	AccomodationReComponent,
 	RescheduleComponent,
-	TeamComponent
+	TeamComponent,
+	PreferencesComponent
 	],
 	imports: [
 BrowserModule,

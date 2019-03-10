@@ -88,7 +88,7 @@
                   <div> <i class="material-icons"> not_listed_location </i><label style="font-weight: bold">Explore Nearby</label> </div>
                   <div>
                    <mat-form-field>
-                       <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open();">
+                       <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open($event);">
                          <mat-option *ngFor="let nearMe of nearMeLst" [value]="nearMe.value" >
                            {{nearMe.viewValue}}
                          </mat-option>
@@ -167,7 +167,7 @@
                     <div> <i class="material-icons"> not_listed_location </i><label style="font-weight: bold">Explore Nearby</label> </div>
                     <div>
                      <mat-form-field>
-                         <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open();">
+                         <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open($event);">
                            <mat-option *ngFor="let nearMe of nearMeLst" [value]="nearMe.value" >
                              {{nearMe.viewValue}}
                            </mat-option>
@@ -251,7 +251,7 @@
                       <div> <i class="material-icons"> not_listed_location </i><label style="font-weight: bold">Explore Nearby</label> </div>
                       <div>
                        <mat-form-field>
-                           <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open();">
+                           <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open($event);">
                              <mat-option *ngFor="let nearMe of nearMeLst" [value]="nearMe.value" >
                                {{nearMe.viewValue}}
                              </mat-option>
@@ -330,7 +330,7 @@
                         <div> <i class="material-icons"> not_listed_location </i><label style="font-weight: bold">Explore Nearby</label> </div>
                         <div>
                          <mat-form-field>
-                             <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open();">
+                             <mat-select placeholder="Select" [(ngModel)]="selectNear" (change)="lightbox_open($event);">
                                <mat-option *ngFor="let nearMe of nearMeLst" [value]="nearMe.value" >
                                  {{nearMe.viewValue}}
                                </mat-option>
@@ -350,7 +350,7 @@
 </div>
 <div id="light">
     <a class="boxclose" id="boxclose" (click)="lightbox_close();"></a>
-    <video id="VisaChipCardVideo" width="600" controls>
+    <video id="VisaChipCardVideo" controls>
         <!--<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">-->
             <source src="assets/Pharmacy.MOV" type="video/mp4">
         <!--Browser does not support <video> tag -->

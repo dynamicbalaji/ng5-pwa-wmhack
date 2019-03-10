@@ -11,8 +11,8 @@ export class UserService {
 	constructor() { }
 	userType:string="";
 	doLogin(data){
-		if (data.email == "admin@infosys.com" && data.password == "admin123") {
-			this.userType = 'admin';
+		if (data.email == "manager@infosys.com" && data.password == "manager123") {
+			this.userType = 'manager';
 			return {
 				code : 200,
 				message : "Login Successful",
@@ -20,8 +20,8 @@ export class UserService {
 				data : data
 			};
 		}
-		else if (data.email == "associate@infosys.com" && data.password == "associate123") {
-			this.userType = "associate";
+		else if (data.email == "employee@infosys.com" && data.password == "employee123") {
+			this.userType = "employee";
 			return {
 				code : 200,
 				message : "Login Successful",

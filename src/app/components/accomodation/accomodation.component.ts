@@ -26,6 +26,8 @@ export class AccomodationComponent implements OnInit {
      hotels:HotelsVO[]=new Array<HotelsVO>();
      bookedhotel=new HotelsVO();
      bookingSuccess:boolean=false;
+     timer:any;
+    showTimer:boolean = false;
 
    constructor(private formBuilder: FormBuilder,private router: Router, private route: ActivatedRoute,
      private studentService:StudentService,private toastr: ToastrService, private notifyService: NotifyService) { 
@@ -45,7 +47,15 @@ export class AccomodationComponent implements OnInit {
    ngOnInit() {
    }
    
+   setTimer() {
+    clearTimeout(this.timer);
+    this.showTimer = true;
+    this.timer = setTimeout(() => {
+        this.showTimer = false;
+    }, 2000);
+  }
    submit(){
+    this.setTimer();
     for(let i=0;i<this.hotels.length;i++){
         if(this.hotels[i].checked){
             this.bookingSuccess=true;

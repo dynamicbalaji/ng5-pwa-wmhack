@@ -10,7 +10,8 @@ import { routerTransition } from '../../services/config/config.service';
  	host: {'[@routerTransition]': ''}
 })
 export class EligibilityComponent implements OnInit {
-
+  timer:any;
+  showTimer:boolean = false;
   private studentAddForm : FormGroup;
   city:string[] = ['Pune','Bangalore','Hyderabad'];
   fromCity:string[] = ['Chennai'];
@@ -26,6 +27,17 @@ export class EligibilityComponent implements OnInit {
   ngOnInit() {
   }
 
+  setTimer() {
+    clearTimeout(this.timer);
+    this.showTimer = true;
+    this.timer = setTimeout(() => {
+        this.showTimer = false;
+    }, 2000);
+  }
+
+  fetcheligibility(){
+    this.setTimer();
+}
   getData(){
     let toCity = this.studentAddForm.value.toCity;
     if(toCity === 'Pune'){

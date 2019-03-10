@@ -5,6 +5,12 @@
 		<h3>Upload Bills <button routerLink="/" class="w3-button w3-orange custom-button margin-right"> <i class="w3-medium fa fa-chevron-left"></i> Back</button></h3>
 	</div>
 
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <img height="100px" *ngIf="showTimer" width="100px" style="text-align: center;margin-top: 250px;
+        position: fixed;
+        z-index: 100;" src="assets/loader2.gif">
+      </div>
+
 	<mat-card>
 		<mat-card-content>
 	<form class="w3-container" [formGroup]="studentAddForm" (ngSubmit)="getData()">
@@ -63,7 +69,7 @@
                             </button>
                             <br>
                             <br>
-                            <div *ngIf="a" style="width:450px;color:green;font-size:20px">
+                            <div *ngIf="a && !showTimer" style="width:450px;color:green;font-size:20px">
                                 Bills Submitted Successfully!
                             </div>
                         

@@ -15,3 +15,8 @@
     font-weight: bold;
 
 }
+.caution-mob{
+    color:red;
+    font-size: 30px;
+    text-align: center; 
+}

@@ -10,6 +10,12 @@
         </h3>
     </div>
 
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <img height="100px" *ngIf="showTimer" width="100px" style="text-align: center;margin-top: 250px;
+        position: fixed;
+        z-index: 100;" src="assets/loader2.gif">
+      </div>
+
     <mat-card  *ngIf="!bookingSuccess">
         <form class="w3-container" [formGroup]="studentAddForm" (ngSubmit)="doRegister()">
             <mat-card-content>
@@ -196,7 +202,7 @@
              </button>
             </form>
     </mat-card>
-    <mat-card *ngIf="bookingSuccess">
+    <mat-card *ngIf="bookingSuccess && !showTimer">
             <mat-card-content >
                 <div fxFlex fxLayout="column" fxLayoutAlign="center center" style="font-size: 24px">
                     <div fxFlex=10><i class="material-icons"  style="font-size:70px !important ;color:green">check_circle_outline</i></div>

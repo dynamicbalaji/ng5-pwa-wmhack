@@ -22,6 +22,7 @@ import { TeamComponent } from '../../components/team/team.component';
  import { DcCardComponent } from '../dc-card/dc-card.component';
  import {ConsolidatedViewComponent} from '../consolidated-view/consolidated-view.component';
  import {SosComponent,DialogOverviewExampleDialog} from '../sos/sos.component';
+ import {PreferencesComponent} from '../preferences/preferences.component';
  import {RescheduleComponent} from './../../components/Rescheduling/reschedule/student-list.component';
  import {AccomodationReComponent} from  './../../components/Rescheduling/accomodation-resched/accomodation.component';
 import {DomesticTravelReComponent} from  './../../components/Rescheduling/domestic-travel-resched/domestic-travel.component';
@@ -57,6 +58,9 @@ import { UserService } from '../../services/user/user.service';
 	 }
 	 open(){
 		document.getElementById("mySidebar").style.display = document.getElementById("mySidebar").style.display == "block"?"none":"block";
+	 }
+	 closeNav(){
+		document.getElementById("mySidebar").style.display = "none";
 	 }
 
  	// Logout User
@@ -150,6 +154,10 @@ import { UserService } from '../../services/user/user.service';
 		component:TaxiReComponent
 	}
 	,
+	{
+		path:'preferences',
+		component:PreferencesComponent
+	}
  ];
 
 /**

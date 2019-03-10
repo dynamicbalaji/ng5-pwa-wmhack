@@ -10,7 +10,8 @@ import { ToastrService } from 'ngx-toastr';
  	host: {'[@routerTransition]': ''}
 })
 export class BilluploadComponent implements OnInit {
-
+  timer:any;
+  showTimer:boolean = false;
   private studentAddForm : FormGroup;
   city:string[] = ['Pune','Bangalore','Hyderabad'];
   fromCity:string[] = ['Taxi','Accommodation','Food'];
@@ -27,9 +28,18 @@ export class BilluploadComponent implements OnInit {
   ngOnInit() {
   }
 
+  setTimer() {
+    clearTimeout(this.timer);
+    this.showTimer = true;
+    this.timer = setTimeout(() => {
+        this.showTimer = false;
+    }, 2000);
+  }
+
   uploadRequest(){
     // get confirm box for confirmation
-       this.a= true;
+      this.setTimer();
+      this.a= true;
       
    
   }
