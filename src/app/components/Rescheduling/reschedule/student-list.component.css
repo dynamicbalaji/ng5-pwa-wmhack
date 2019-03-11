@@ -3,3 +3,10 @@ td{
 	    vertical-align: middle;
 }
 /*Created By : Infosys Walmart Account*/
+.row{
+	align-items: center;
+	padding:1vw;
+}
+.row:nth-child(odd){
+	background: lightgray;
+}

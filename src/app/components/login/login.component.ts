@@ -41,12 +41,18 @@ export class LoginComponent implements OnInit {
 
 	// Login success function
 	success(data){
-		if (data.code == 200) {
+		if (data.code == 200 && data.userType !== "agent") {
 			localStorage.setItem('userData', JSON.stringify(data.data));
 			localStorage.setItem('userType', data.userType);
 			this.router.navigate(['/']);
 			this.toastr.success('Success', "Logged In Successfully");
-		}else{
+		}else if(data.code == 200 && data.userType === "agent"){
+			localStorage.setItem('userData', JSON.stringify(data.data));
+			localStorage.setItem('userType', data.userType);
+			this.router.navigate(['/agentrequests']);
+			this.toastr.success('Success', "Logged In Successfully");
+		}
+		else{
 			this.toastr.error('Failed', "Invalid Credentials");
 		}
 	}

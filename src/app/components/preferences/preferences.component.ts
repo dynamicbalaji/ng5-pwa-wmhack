@@ -16,7 +16,7 @@ export class PreferencesComponent implements OnInit {
   private studentAddForm : FormGroup;
   city:string[] = ["Royal Grand", "Royal Grand Palace", "Grand", "Grand Hotel", "No preference"];
   fromCity:string[] = ['Ola', 'Uber', 'No preference'];
-  cab: string[] = ['Yes', 'No', 'No preference'];
+  cab: string[] = ['Yes', 'No'];
   onward: string[] = ['Before 6AM','6AM-12PM','12PM-6PM','After 6PM'];
   meal: string[] = ['Asian Vegetarian', 'Hindu Vegetarian', 'Non Vegetarian', 'No preference'];
   seat: string[] = ['Aisle', 'Window', 'No preference'];
@@ -24,13 +24,13 @@ export class PreferencesComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { 
        this.studentAddForm = this.formBuilder.group({
-           fromCity: ['',  [Validators.required]],
+           fromCity: ['No preference',  [Validators.required]],
            toCity: ['',  [Validators.required]],
            onward: ['',  [Validators.required]],
            return: ['',  [Validators.required]],
            meal: ['',  [Validators.required]],
            seat: ['',  [Validators.required]],
-           cab: ['',  [Validators.required]],           
+           cab: ['No',  [Validators.required]],           
        });         
   }
 

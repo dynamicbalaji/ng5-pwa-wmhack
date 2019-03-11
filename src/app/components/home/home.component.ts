@@ -16,6 +16,7 @@ import { EligibilityComponent } from '../../components/eligibility/eligibility.c
 import { BilluploadComponent } from '../../components/bill-upload/bill-upload.component';
 import { NotificationsComponent } from '../../components/notifications/notifications.component';
 import { TeamComponent } from '../../components/team/team.component';
+import {AgentComponent} from '../agent/agent.component'; 
  // Services
  import { routerTransition } from '../../services/config/config.service';
  import { TaxiComponent } from '../taxi/taxi.component';
@@ -28,6 +29,8 @@ import { TeamComponent } from '../../components/team/team.component';
 import {DomesticTravelReComponent} from  './../../components/Rescheduling/domestic-travel-resched/domestic-travel.component';
 import {TaxiReComponent} from './../../components/Rescheduling/taxi-resched/taxi.component';
 import { UserService } from '../../services/user/user.service';
+import { OneTouchBookComponent } from './../../components/one-touch-book/one-touch-book.component';
+import { RequestIternaryComponent } from '../../components/request-iternary/request-iternary.component';
  @Component({
  	selector: 'app-home',
  	templateUrl: './home.component.html',
@@ -157,7 +160,20 @@ import { UserService } from '../../services/user/user.service';
 	{
 		path:'preferences',
 		component:PreferencesComponent
+	},
+	{
+		path: 'agentrequests',
+		component: AgentComponent
+	},
+	{
+		path:'oneclickbook',
+		component:OneTouchBookComponent
+	},
+	{
+		path: 'requestItenary',
+		component: RequestIternaryComponent
 	}
+	
  ];
 
 /**

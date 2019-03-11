@@ -3,7 +3,7 @@
     <div class="w3-panel w3-round-small w3-teal">
         <h3>
             <span>Taxi</span>
-            <a routerLink="/" class="w3-button w3-orange custom-button">
+            <a routerLink="/" class="w3-button w3-deep-orange custom-button">
                 <i class="w3-medium fa fa-chevron-left"></i> Back</a>
         </h3>
     </div>
@@ -200,6 +200,51 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap.gt-sm="100px" fxLayoutGap.lt-sm="10px">
+                    <div fxLayout="column" fxLayoutAlign="start" fxFlex.gt-sm="40" fxFlex.lt-sm="90">
+                        <div fxLayout="row">
+                            <label class="w3-text-gray">
+                                <b>Would you like to share the cab ?</b>
+                            </label>
+                        </div>
+                        <div fxLayout="row" style="align-items: center;">
+                            <mat-checkbox checked="true" (change)="change($event)"></mat-checkbox>
+                            <label> &nbsp;Yes</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="selected" fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap.gt-sm="100px" fxLayoutGap.lt-sm="10px">
+                        <div fxLayout="column" fxLayoutAlign="start" fxFlex.gt-sm="40" fxFlex.lt-sm="90">
+                            <div fxLayout="row">
+                                <label class="w3-text-gray">
+                                    <b>Kindly choose a person with whom you would like to share:</b>
+                                </label>
+                            </div>
+                            <div fxLayout="row" style="align-items: center;" class="w3-panel w3-light-grey w3-padding-16 w3-card-2">
+                                    <table class="w3-table w3-striped w3-bordered" fxShow >
+                                            <tr>
+                                              <th><i class="w3-medium" style="width: 120px"></i> Select</th>  
+                                              <th><i class="w3-medium" style="width: 120px"></i> Employee Id</th>
+                                              <th><i class="w3-medium"></i> Name</th>
+                                              <th><i class="w3-medium"></i> Booking Req. Number</th>
+                                            </tr>
+                                            <tr >
+                                              <td class="pointer" >
+                                                  <input class="w3-input w3-border" type="checkbox"></td>
+                                              <td class="pointer" >812315</td>
+                                              <td class="pointer" >Karthic</td>
+                                              <td class="pointer" style="word-break: break-all" >R56895745</td>
+                                            </tr>  
+                                          </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                 <br>
 

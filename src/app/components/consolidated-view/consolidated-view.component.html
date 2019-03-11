@@ -1,6 +1,9 @@
 <div fxLayout = "column"  fxLayoutGap="20px" ngStyle.gt-md="margin:20px 20px;">
 	<div class="w3-panel w3-round-small w3-teal">
-		<h3>Consolidated Details - D68456A2 - Client Meeting (Hyderabad)<button routerLink="/" class="w3-button w3-orange custom-button margin-right"> <i class="w3-medium fa fa-chevron-left"></i> Back</button></h3>
+		<h3>Consolidated Details - D68456A2 - Client Meeting (Hyderabad)<button routerLink="/" class="w3-button w3-deep-orange custom-button margin-right"> <i class="w3-medium fa fa-chevron-left"></i> Back</button></h3>
+	</div>
+	<div class="frame" ngStyle.lt-md="width:90vw" id="bot" *ngIf="toggleChat" >
+			<app-bot></app-bot>
 	</div>
 	<div fxLayout = "row" fxLayout.xs = "column" style="padding: 0vw 8vw">
 		<div  fxFlex="50" fxLayoutAlign="start start" fxLayoutAlign.xs="end end">
@@ -25,7 +28,7 @@
 			
 				<mat-expansion-panel-header>		
 				<mat-panel-title style="font-family: Arial,sans-serif">	
-					<mat-icon>local_taxi</mat-icon> &nbsp;<div style="font-size: 17px">{{taxi.pickUp}} to {{taxi.drop}}</div>
+						<mat-icon>local_taxi</mat-icon> &nbsp;<div style="font-size: 17px;width: 100%;float: right;">{{taxi.pickUp}} to {{taxi.drop}}&emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span></div>
 				</mat-panel-title>
 				</mat-expansion-panel-header>	
 				<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.xs="2vw">	
@@ -66,7 +69,7 @@
 			
 				<mat-expansion-panel-header>		
 				<mat-panel-title style="font-family: Arial,sans-serif">		
-					<i class="material-icons">flight_takeoff</i>&nbsp; <div style="font-size: 17px"> {{ flightStaringPoint }} to {{ flightEndingPoint }}</div>
+						<i class="material-icons">flight_takeoff</i>&nbsp; <div style="font-size: 17px;width: 100%;float: right;"> {{ flightStaringPoint }} to {{ flightEndingPoint }}&emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span></div>
 				</mat-panel-title>
 				</mat-expansion-panel-header>	
 				<div fxFlex class="row1">
@@ -216,7 +219,7 @@
 			
 				<mat-expansion-panel-header>		
 				<mat-panel-title style="font-family: Arial,sans-serif">		
-					<mat-icon>local_taxi</mat-icon>&nbsp;<div style="font-size: 17px"> {{taxi.pickUp}} to {{taxi.drop}} </div>
+						<mat-icon>local_taxi</mat-icon>&nbsp;<div style="font-size: 17px;width: 100%;float: right;"> {{taxi.pickUp}} to {{taxi.drop}} &emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span></div>
 				</mat-panel-title>
 				</mat-expansion-panel-header>		
 				<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.xs="2vw">	
@@ -257,7 +260,7 @@
 			
 				<mat-expansion-panel-header>		
 				<mat-panel-title style="font-family: Arial,sans-serif">		
-					<mat-icon>hotel</mat-icon>&nbsp;<div style="font-size: 17px">	Accommodation in {{ accom.city}}</div>
+						<mat-icon>hotel</mat-icon>&nbsp;<div style="font-size: 17px;width: 100%;float: right;">	Accommodation in {{ accom.city}} &emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span></div>
 				</mat-panel-title>
 				</mat-expansion-panel-header>		
 				<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="3vw" style="word-break: break-word">	
@@ -289,7 +292,7 @@
 				
 					<mat-expansion-panel-header>		
 					<mat-panel-title style="font-family: Arial,sans-serif">		
-						<mat-icon>local_taxi</mat-icon>&nbsp;<div style="font-size: 17px"> {{taxi.pickUp}} to {{taxi.drop}} </div>
+							<mat-icon>local_taxi</mat-icon>&nbsp;<div style="font-size: 17px;width: 100%;float: right;"> {{taxi.pickUp}} to {{taxi.drop}}&emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span> </div>
 					</mat-panel-title>
 					</mat-expansion-panel-header>		
 					<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.xs="2vw">	
@@ -330,7 +333,7 @@
 					
 						<mat-expansion-panel-header>		
 						<mat-panel-title style="font-family: Arial,sans-serif">		
-							<i class="material-icons">flight_takeoff</i>&nbsp; <div style="font-size: 17px"> {{ returnflightStaringPoint }} to {{ returnflightEndingPoint }}</div>
+								<i class="material-icons">flight_takeoff</i>&nbsp; <div style="font-size: 17px;width: 100%;float: right;"> {{ returnflightStaringPoint }} to {{ returnflightEndingPoint }} &emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span></div>
 						</mat-panel-title>
 						</mat-expansion-panel-header>	
 						<div fxFlex class="row1">
@@ -480,7 +483,7 @@
 						
 							<mat-expansion-panel-header>		
 							<mat-panel-title style="font-family: Arial,sans-serif">	
-								<mat-icon>local_taxi</mat-icon> &nbsp;<div style="font-size: 17px">{{taxi.pickUp}} to {{taxi.drop}}</div>
+									<mat-icon>local_taxi</mat-icon> &nbsp;<div style="font-size: 17px;width: 100%;float: right;">{{taxi.pickUp}} to {{taxi.drop}} &emsp;&emsp;&emsp;<span class="apprved">Booking Confirmed</span></div>
 							</mat-panel-title>
 							</mat-expansion-panel-header>	
 							<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap.xs="2vw">	
@@ -520,7 +523,7 @@
 	</div>
 	<div fxLayout= "row" fxLayoutAlign="center center" fxLayoutGap="3vw" fxLayoutGap.xs="5vw">
 			<div fxFlex="7" fxFlex.xs="15">
-					<img style="width: 50px;height: 50px;cursor: pointer;" src="assets/chat.png">
+					<img style="width: 50px;height: 50px;cursor: pointer;" src="assets/chat.png " (click)="toggleChat=!toggleChat">
 			</div>
 			<div fxFlex="7" fxFlex.xs="15">
 		

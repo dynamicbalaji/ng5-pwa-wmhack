@@ -5,11 +5,10 @@ import { enableProdMode } from '@angular/core';
 //Modules
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr'; 
 import {MaterialModule} from './material.module';
-
+import { OneTouchBookComponent } from './components/one-touch-book/one-touch-book.component';
 // Services
 import { AuthService } from './services/auth/auth.service';
 import { UserService } from './services/user/user.service';
@@ -45,7 +44,20 @@ import {DomesticTravelReComponent} from  './components/Rescheduling/domestic-tra
 import {RescheduleComponent} from './components/Rescheduling/reschedule/student-list.component';
 import {TaxiReComponent} from './components/Rescheduling/taxi-resched/taxi.component';
 import {PreferencesComponent} from './components/preferences/preferences.component';
-
+import {AgentComponent} from './components/agent/agent.component';
+import { RequestIternaryComponent } from './components/request-iternary/request-iternary.component';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpModule,Http } from '@angular/http';
+import {BotComponent} from './components/bot/bot.component';
+import { BotWindowComponent } from './components/bot/bot-window/bot-window.component';
+import { BotMessageRendererComponent } from './components/bot/bot-window/bot-message-renderer/bot-message-renderer.component';
+import { CommunicationService } from './services/communication.service';
+import { ChatService } from './services/chat.service';
+import { SpeechRecognitionService } from './services/speech.recognition.service';
+import { ConfigurationService } from './services/configuration.service';
+import { UtteranceService } from './services/utterance.service';
+import {AppService} from './services/app.service';
+import {WallyInterceptor} from './services/security/wally-http-interceptor';
 // Parent Routes
 const routes : Routes = [
 {
@@ -61,7 +73,11 @@ const routes : Routes = [
 {
 	path: '**',
 	redirectTo: ''
-}
+},
+{
+	path: 'bot',
+	component: BotComponent
+  },
 ];
 
 @NgModule({
@@ -91,7 +107,13 @@ const routes : Routes = [
 	AccomodationReComponent,
 	RescheduleComponent,
 	TeamComponent,
-	PreferencesComponent
+	PreferencesComponent,
+	AgentComponent,
+	OneTouchBookComponent,
+	RequestIternaryComponent,
+	BotComponent,
+	BotWindowComponent,
+	BotMessageRendererComponent
 	],
 	imports: [
 BrowserModule,
@@ -102,13 +124,21 @@ BrowserModule,
 	BrowserAnimationsModule,
 	HttpClientModule,
 	MaterialModule,
+	HttpModule,
 	ToastrModule.forRoot({ 
 		timeOut: 3000,
 		positionClass: 'toast-bottom-right',
 		preventDuplicates: true,
 	}),
 	],
-	providers: [AuthService,UserService,StudentService, NotifyService],
+	providers: [ { provide: HTTP_INTERCEPTORS, useClass: WallyInterceptor, multi: true },AuthService,UserService,StudentService, NotifyService,
+		AppService,
+		ChatService,
+		CommunicationService,
+		SpeechRecognitionService,
+		ConfigurationService,
+		UtteranceService],
+		
 	bootstrap: [AppComponent],
 	entryComponents:[DialogOverviewExampleDialog]
 })

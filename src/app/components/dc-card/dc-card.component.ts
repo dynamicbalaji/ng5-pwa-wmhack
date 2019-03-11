@@ -20,7 +20,7 @@ nearMeLst = [{value:1,viewValue:'Restaurants'},{value:2,viewValue:'Pharmacy'},{v
 selecteddc:string="CHN-M";
 lightbox_open(event) {
   let lightBoxVideo = <HTMLVideoElement> document.getElementById("VisaChipCardVideo");
-  window.scrollTo(0, 0);
+  document.body.scrollTop = 0;
   if(event.value === 1){
     lightBoxVideo.src = "assets/Hotels.MP4";
   } else if(event.value === 2){

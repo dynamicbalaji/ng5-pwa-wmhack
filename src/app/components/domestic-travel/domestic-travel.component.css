@@ -85,3 +85,11 @@
      content: "\f006 \f006 \f006 \f006 \f006";
    }
    
+   .frame{
+    width: 30vw;
+    height:70vh;
+    right: 10px;
+    bottom:0px;
+    position: fixed;
+    z-index: 9999;
+   }

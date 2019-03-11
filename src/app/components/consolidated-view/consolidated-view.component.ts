@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes ,Router} from '@angular/router';
 import { routerTransition } from '../../services/config/config.service';
-
+import {CommunicationService} from '../../services/communication.service';
 @Component({
   selector: 'app-consolidated-view',
   templateUrl: './consolidated-view.component.html',
@@ -11,13 +11,16 @@ import { routerTransition } from '../../services/config/config.service';
 })
 export class ConsolidatedViewComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private comSer:CommunicationService) { }
 
   travelRecordsLst :travelRecords;
   selIndex : number;
- 
+  toggleChat:boolean=false;
   ngOnInit() {
-  
+    this.comSer.showChat$.subscribe(
+      (flag) => {
+       this.toggleChat=flag;
+      });
   }
   panelOpenState = false;
   walletAmt = 2500;

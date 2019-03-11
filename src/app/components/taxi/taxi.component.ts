@@ -16,6 +16,7 @@ import { environment } from '../../../environments/environment';
 export class TaxiComponent implements OnInit {
 
  // create studentAddForm of type FormGroup 
+ selected = true;
  timer:any;
  showTimer:boolean = false;
  private studentAddForm : FormGroup;
@@ -63,6 +64,15 @@ constructor(private formBuilder: FormBuilder,private router: Router, private rou
 ngOnInit() {
 }
 
+employeeListData:any=[{
+    "name" : "karthick",
+    "empId" : "658789"
+  },
+  {
+    "name" : "karthick",
+    "empId" : "658789"
+  }];
+
 setTimer() {
     clearTimeout(this.timer);
     this.showTimer = true;
@@ -70,6 +80,15 @@ setTimer() {
         this.showTimer = false;
     }, 2000);
   }
+  change(event){
+    if(event.checked){
+      this.selected=true;
+    }
+    else{
+      this.selected=false;
+    }
+  }
+  
 
 bookingSuccess:boolean=false;
 taxiLst:taxiLst[]=new Array<taxiLst>() ;

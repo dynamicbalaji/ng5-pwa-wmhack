@@ -2,6 +2,8 @@ import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import {MatCardModule} from '@angular/material';
 import{ FormBuilder,FormGroup,FormControl,FormGroupDirective,NgForm,Validators} from '@angular/forms';
 import { routerTransition } from '../../services/config/config.service';
+import {CommunicationService} from '../../services/communication.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-domestic-travel',
   templateUrl: './domestic-travel.component.html',
@@ -12,7 +14,7 @@ import { routerTransition } from '../../services/config/config.service';
 })
 export class DomesticTravelComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,private comSer:CommunicationService,private toastr: ToastrService) { }
   travelForm:FormGroup;
   travelOpt:any;
   isInternational:boolean=false;
@@ -27,6 +29,7 @@ export class DomesticTravelComponent implements OnInit {
   selectedFlight :FlightsVO;
   timer:any;
   showTimer:boolean = false;
+  toggleChat:boolean=false;
 
   ngOnInit() {
     this.travelForm=this.formBuilder.group({
@@ -42,6 +45,10 @@ export class DomesticTravelComponent implements OnInit {
       'chk1':[],
       'advAmount':[0]
     });
+    this.comSer.showChat$.subscribe(
+      (flag) => {
+       this.toggleChat=flag;
+      });
     this.agencies = ["International Travel House","Bharat International Travels","Kuoni Business Travels", 'Carlson Wagonlit Travels'];
     this.agenciesReview = {
       "International Travel House" : ["24/7 Service: Yes","Weekend Support: Yes","Cancellation: Free"],
@@ -61,6 +68,7 @@ export class DomesticTravelComponent implements OnInit {
     this.showTimer = true;
     this.timer = setTimeout(() => {
         this.showTimer = false;
+        this.toastr.success("Request Submitted","Success");
     }, 2000);
   }
 

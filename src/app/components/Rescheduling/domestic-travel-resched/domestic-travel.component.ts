@@ -25,10 +25,11 @@ export class DomesticTravelReComponent implements OnInit {
       'travelType':['1'],
       'source':['Chennai'],
       'destination':['Bangalore'],
-      'stDate':['03/08/2019'],
-      'RtrnDt' :['03/11/2019'],
+      'stDate':[new Date('2019-03-12')],
+      'RtrnDt' :[new Date('2019-03-18')],
       'numOfPsgnr':[1],
       'chk':[true],
+      'paymentType':[],
       'advAmount':[1000],
       'agency':['Uber']
     });

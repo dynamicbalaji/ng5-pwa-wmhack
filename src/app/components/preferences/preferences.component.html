@@ -2,7 +2,7 @@
 
 <div class="w3-container">
 	<div class="w3-panel w3-round-small w3-teal">
-		<h3>Preference Details <button routerLink="/" class="w3-button w3-orange custom-button margin-right"> <i class="w3-medium fa fa-chevron-left"></i> Back</button></h3>
+		<h3>Preference Details <button routerLink="/" class="w3-button w3-deep-orange custom-button margin-right"> <i class="w3-medium fa fa-chevron-left"></i> Back</button></h3>
 	</div>
 
     <div fxLayout="row" fxLayoutAlign="center center">
@@ -91,21 +91,6 @@
                         <div fxLayout="row">
                             <select class="w3-input w3-border" type="text" style="width:100%" formControlName="seat">
                                 <option *ngFor="let item of seat" [value]="item">{{item}}</option>
-                            </select>
-                        </div>
-                    </div>
-            </div>
-            <div fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap.gt-sm="100px" fxLayoutGap.lt-sm="10px">
-                    <div fxLayout="column" fxLayoutAlign="start" fxFlex.gt-sm="40" fxFlex.lt-sm="90">
-                        <div fxLayout="row">
-                            <label class="w3-text-gray">
-                                <b>Accommodation Preference</b>
-                            </label>
-                        </div>
-
-                        <div fxLayout="row">
-                            <select class="w3-input w3-border" type="text" style="width:100%" formControlName="toCity">
-                                <option *ngFor="let item of city" [value]="item">{{item}}</option>
                             </select>
                         </div>
                     </div>

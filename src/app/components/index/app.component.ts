@@ -41,7 +41,7 @@ export class AppComponent {
 		email : "vincent_raj@infosys.com",
 		phone : 742356,
 		project : "WMHB3459",
-		reqType: "International"
+		reqType: "Domestic"
 	}
 	];
 
