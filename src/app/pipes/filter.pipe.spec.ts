@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { FilterPipe } from './filter.pipe';
@@ -12,5 +12,5 @@ describe('FilterPipe', () => {
 });
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

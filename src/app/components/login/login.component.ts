@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -60,5 +60,5 @@ export class LoginComponent implements OnInit {
 }
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

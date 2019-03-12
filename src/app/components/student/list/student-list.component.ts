@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
  import { Component, OnInit } from '@angular/core';
@@ -67,5 +67,5 @@
  	}
  }
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -29,5 +29,5 @@ describe('LoginComponent', () => {
 });
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { TestBed, async } from '@angular/core/testing';
@@ -31,5 +31,5 @@ describe('AppComponent', () => {
 });
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

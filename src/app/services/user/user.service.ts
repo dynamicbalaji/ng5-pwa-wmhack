@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Injectable } from '@angular/core';
@@ -53,5 +53,5 @@ export class UserService {
 	}
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

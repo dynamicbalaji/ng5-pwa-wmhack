@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Component } from '@angular/core';
@@ -52,5 +52,5 @@ export class AppComponent {
 }
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { HighlightStudentDirective } from './highlight-student.directive';
@@ -12,5 +12,5 @@ describe('HighlightStudentDirective', () => {
 });
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

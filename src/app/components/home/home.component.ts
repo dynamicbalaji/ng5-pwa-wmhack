@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
  import { Component, OnInit } from '@angular/core';
@@ -177,5 +177,5 @@ import { RequestIternaryComponent } from '../../components/request-iternary/requ
  ];
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

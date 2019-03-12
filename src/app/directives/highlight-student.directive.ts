@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Directive, ElementRef,HostListener } from '@angular/core';
@@ -26,5 +26,5 @@ export class HighlightStudentDirective {
 }
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

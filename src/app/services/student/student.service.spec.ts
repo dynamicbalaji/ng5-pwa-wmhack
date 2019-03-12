@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { TestBed, inject } from '@angular/core/testing';
@@ -19,5 +19,5 @@ describe('StudentService', () => {
 });
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

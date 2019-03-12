@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Pipe, PipeTransform } from '@angular/core';
@@ -16,5 +16,5 @@ export class PhonePipe implements PipeTransform {
 }
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

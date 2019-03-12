@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Injectable }     from '@angular/core';
@@ -25,5 +25,5 @@ export class AuthService implements CanActivate {
 }
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

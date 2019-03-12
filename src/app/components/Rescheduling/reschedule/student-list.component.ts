@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -196,5 +196,5 @@ export class FlightsVO{
    flightNo:string;
  }
 /**
-* Created By : Infosys Walmart Account
+* Created By : Inf-Wm Account
 */

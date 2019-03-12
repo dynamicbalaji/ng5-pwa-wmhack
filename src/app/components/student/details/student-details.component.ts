@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
  import { Component, OnInit } from '@angular/core';
  import {Validators, FormBuilder, FormGroup} from '@angular/forms';
@@ -46,5 +46,5 @@
  }
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

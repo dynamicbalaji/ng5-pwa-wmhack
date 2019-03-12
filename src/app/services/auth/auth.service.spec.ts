@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { TestBed, inject } from '@angular/core/testing';
@@ -20,5 +20,5 @@ describe('AuthService', () => {
 
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

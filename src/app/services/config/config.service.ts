@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { Injectable } from '@angular/core';
@@ -68,5 +68,5 @@ function slideToLeft() {
 
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */

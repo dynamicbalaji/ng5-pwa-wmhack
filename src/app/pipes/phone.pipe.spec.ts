@@ -1,5 +1,5 @@
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
 
 import { PhonePipe } from './phone.pipe';
@@ -13,5 +13,5 @@ describe('PhonePipe', () => {
 
 
 /**
- * Created By : Infosys Walmart Account
+ * Created By : Inf-Wm Account
  */
